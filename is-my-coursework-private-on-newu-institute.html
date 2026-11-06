@@ -1,0 +1,107 @@
+<!-- DRAFT — DO NOT PUBLISH YET.
+HOLD: publish only after the Workers AI + Serper deploy is live on newu.institute.
+This post names Cloudflare Workers AI and Serper as the processors of student work.
+Until that deploy is live, the live site still runs the Gemini setup, so these
+claims would not yet be true. (Serper builder message:
+~/workspace/user/files/newu-builder-add-serper-discovery-2026-11-06.md)
+Sources: Cloudflare Workers AI data-usage page
+https://developers.cloudflare.com/workers-ai/platform/data-usage/ — zero data
+retention for standard inference requests, "Cloudflare does not use Customer
+Content processed by Workers AI to train AI models", "Your content remains
+yours" (exceptions: stateful features you select, and legal-obligation handling
+— neither applies to NewU's grading/tutor calls as built). Serper receives only
+the discovery search query text, never coursework — per the builder message.
+Roles/grants facts from MEMORY.md (Nov 6): employer sees only what the learner
+grants, read-only, revocable anytime, no expiry until revoked; reviewers/admins
+see work only for grading, spot checks, and fraud review. Photo: stored and
+locked in the live build (verified Nov 6), never shared with employers.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is My Coursework Private on NewU Institute? | NewU Institute Blog</title>
+<meta name="description" content="Who sees your coursework on NewU Institute, what never happens to it, and where it goes when it is graded — no ads, no trackers, no selling your data, and your work is never used to train AI.">
+<link rel="canonical" href="https://blog.newu.institute/is-my-coursework-private-on-newu-institute.html">
+<meta property="og:title" content="Is My Coursework Private on NewU Institute?">
+<meta property="og:description" content="You decide who sees your coursework. No ads, no trackers, no selling your data — and your work is never used to train AI.">
+<meta property="og:type" content="article">
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.7; max-width: 720px; margin: 0 auto; padding: 2rem 1.25rem 4rem; color: #16263F; background: #fff; }
+  h1 { font-size: 2rem; line-height: 1.25; margin-bottom: 0.25rem; color: #16263F; }
+  h2 { font-size: 1.35rem; margin-top: 2.25rem; border-bottom: 1px solid #C2C2C2; padding-bottom: 0.35rem; color: #16263F; }
+  a { color: #0F94F1; }
+  .byline { color: #666; margin-bottom: 2rem; }
+  .cta { background: #16263F; color: #fff; padding: 1.25rem 1.5rem; border-radius: 8px; margin: 2.5rem 0; }
+  .cta a { color: #fff; }
+  ul, ol { padding-left: 1.4rem; }
+  li { margin-bottom: 0.4rem; }
+  footer { margin-top: 3rem; font-size: 0.85rem; color: #888; border-top: 1px solid #C2C2C2; padding-top: 1rem; }
+</style>
+</head>
+<body>
+
+<h1>Is My Coursework Private on NewU Institute?</h1>
+<p class="byline"><em>By NewU Institute</em></p>
+
+<h2>The short answer</h2>
+<p>Yes. You decide who sees your coursework. No employer, no advertiser, and no AI company sees it unless you choose to share it — and your work is never used to train AI. There are no ads on the platform, no advertising trackers, and NewU Institute does not sell your data.</p>
+
+<h2>Who can see your work</h2>
+<p>Three groups, and only three:</p>
+<ul>
+<li><strong>You.</strong> Your coursework, grades, and progress record are yours.</li>
+<li><strong>The people who grade and check it.</strong> The AI that grades your work, and a human reviewer or admin when a spot check or a fraud review calls for one. That is the whole point of a verified credential: somebody has to check the work before it counts.</li>
+<li><strong>An employer — only if you let them.</strong> You issue a verification grant to an employer&rsquo;s email address, and you can revoke it at any time. Until you revoke it, they can see the coursework grades, course names, course grades, and Certificates you chose to share — read-only, nothing more.</li>
+</ul>
+<p>Nobody else sees your work. Not other learners. Not advertisers. Not data brokers.</p>
+
+<h2>What never happens to your work</h2>
+<ul>
+<li><strong>It is never used to train AI.</strong> Your coursework, submissions, and tutor questions go to Cloudflare Workers AI to be graded and answered. Cloudflare states plainly that it does not use what it processes to train AI models, and that for standard requests it does not keep your inputs or outputs after the request is done. Your content remains yours.</li>
+<li><strong>It is never sold.</strong> NewU Institute does not sell your data to anyone, for any price.</li>
+<li><strong>It is never shown to advertisers.</strong> There are no ads on the platform and no advertising trackers following you around it.</li>
+</ul>
+
+<h2>Where your work goes when it is graded</h2>
+<p>Your work does leave your screen — it has to, to be graded. Here is exactly where it goes, and what each place receives:</p>
+<ul>
+<li><strong>Cloudflare Workers AI</strong> receives your coursework and tutor questions, to grade them and answer them. It does not keep them after the request, and it does not train on them.</li>
+<li><strong>Serper</strong> receives only the words you search with when you look for a course. It never receives your coursework, your submissions, or your grades.</li>
+<li><strong>Resend</strong> receives your email address when the platform sends you a sign-in or recovery message. Nothing else.</li>
+<li><strong>Supabase</strong> stores your account, coursework, and grades, so your progress record exists when you come back.</li>
+<li><strong>The blockchain</strong> receives only hashes — short codes that prove a course was completed and how it was graded. No photograph, no personal details, and no coursework ever goes on chain. The anchor is public and permanent, but it cannot identify you.</li>
+</ul>
+
+<h2>What an employer can — and cannot — see</h2>
+<p>An employer can verify your Certificate for free, in seconds, at any time. If you grant them access, they can see the grades and courses behind it. They cannot see your photo, your address, your phone number, or any coursework you did not share. And when you revoke the grant, their access ends.</p>
+
+<h2>What NewU Institute does ask for, and why</h2>
+<p>Privacy here does not mean anonymity. The platform asks for your legal name, date of birth, address, phone, and a recovery email, plus a photo — because a credential is only worth something if the work provably belongs to one real person. That is what the photo is for: proving the work is yours. It is locked once confirmed, and it is never shared with employers.</p>
+<p>What it does <em>not</em> ask for is a government ID. Your identity, your avatar — no government ID required.</p>
+
+<h2>Frequently asked questions</h2>
+<p><strong>Can I delete my coursework?</strong><br>
+You can ask for your off-chain data — your account and coursework records — to be deleted at any time. The blockchain anchors cannot be deleted: they are hashes only, they do not identify you, and their permanence is what makes the credential verifiable.</p>
+<p><strong>Does the AI that grades my work learn from it?</strong><br>
+No. The grading AI does not train on your submissions, and it does not keep them after grading.</p>
+<p><strong>Can another learner see my grades?</strong><br>
+No. Your grades and coursework are visible only to you, to the people who grade and check them, and to an employer you grant access to.</p>
+<p><strong>Where do I start?</strong><br>
+At <a href="https://newu.institute">newu.institute</a> — explore the 100 majors, or design your own. Questions? Email <a href="mailto:newuinstitute@aol.com">newuinstitute@aol.com</a>.</p>
+
+<h2>The bottom line</h2>
+<p>Your education is private by design: you control who sees your work, it is never sold, never shown to advertisers, and never used to train AI. What is public is only the proof — a hash on a blockchain that says the work was done and graded, without saying who you are beyond the record you chose to share.</p>
+
+<div class="cta">
+<strong>NewU Institute — Your education. Your possibilities.</strong><br>
+<a href="https://newu.institute">newu.institute</a>
+</div>
+
+<footer>
+<a href="https://blog.newu.institute/">&larr; Back to the NewU Institute Blog</a>
+</footer>
+
+</body>
+</html>
